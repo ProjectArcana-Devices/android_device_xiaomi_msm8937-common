@@ -1,0 +1,12 @@
+<<<<<<< HEAD
+allow system_app zygote:unix_stream_socket { getopt };
+
+# FPS Info
+allow system_app sysfs_graphics:dir search;
+allow system_app sysfs_graphics:file { getattr open read write };
+||||||| parent of 5dd05cfd (msm8937-common: address FPS info denials)
+=======
+# FPS Info
+allow system_app sysfs_graphics:dir search;
+allow system_app sysfs_graphics:file { getattr open read write };
+>>>>>>> 5dd05cfd (msm8937-common: address FPS info denials)
