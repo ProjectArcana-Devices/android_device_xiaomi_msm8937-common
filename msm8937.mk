@@ -457,24 +457,5 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
-# ROM: CherishOS
-ifneq ($(wildcard vendor/cherish),)
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-cherish
-
-ifneq ($(WITH_GMS),true)
-USE_LAWNCHAIR := true
-endif
-TARGET_BOOT_ANIMATION_RES := 720
-TARGET_INCLUDE_LIVE_WALLPAPERS := false
-endif # vendor/cherish
-
-# ROM: PalladiumOS
-ifneq ($(wildcard vendor/palladium),)
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-palladium
-
-#USE_GAPPS := true
-TARGET_BOOT_ANIMATION_RES := 720
-endif # vendor/palladium
-
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/msm8937-common/msm8937-common-vendor.mk)
