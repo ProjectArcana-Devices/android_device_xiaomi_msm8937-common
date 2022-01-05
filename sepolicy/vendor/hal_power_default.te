@@ -10,6 +10,8 @@ allow hal_power_default sysfs_devfreq:file rw_file_perms;
 allow hal_power_default sysfs_devfreq:lnk_file r_file_perms;
 allow hal_power_default sysfs_kgsl:file rw_file_perms;
 allow hal_power_default sysfs_kgsl:lnk_file r_file_perms;
+allow hal_power_default sysfs:file { read };
+allow hal_power_default sysfs:file { open };
 
 # To get/set powerhal state property
 set_prop(hal_power_default, power_prop)
