@@ -1,0 +1,4 @@
+allow untrusted_app proc_tty_drivers:file { getattr  open  read };
+allow untrusted_app qemu_hw_prop:file { open  read };
+allow untrusted_app virtual_ab_prop:file { getattr  open };
+allow untrusted_app zygote:unix_stream_socket { getopt };
