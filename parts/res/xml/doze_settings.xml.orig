@@ -14,6 +14,18 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<<<<<<< HEAD
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/ambient_display_title">
+
+    <com.android.settingslib.widget.MainSwitchPreference
+        android:defaultValue="false"
+        android:key="doze_enable"
+        android:title="@string/ambient_enable" />
+||||||| parent of 35750ac0 (msm8973-common: parts: Fix missing ambient display string)
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+=======
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/ambient_display_title">
@@ -30,6 +42,7 @@
         android:summary="@string/ambient_display_always_on_summary"
         android:persistent="false" 
 	android:icon="@drawable/ic_display" />
+>>>>>>> 35750ac0 (msm8973-common: parts: Fix missing ambient display string)
 
     <SwitchPreference
         android:key="wake_on_gesture"
