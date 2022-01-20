@@ -208,5 +208,9 @@ persist.sys.binary_xml=false
 persist.timed.enable=true
 
 debug.hwui.use_hint_manager=true
+<<<<<<< HEAD
 renderthread.skia.reduceopstasksplitting=false
+||||||| parent of 29c46a3b (msm8937-common: vendor: set cputime margin for HWUI)
+=======
 debug.hwui.target_cpu_time_percent=30
+>>>>>>> 29c46a3b (msm8937-common: vendor: set cputime margin for HWUI)
