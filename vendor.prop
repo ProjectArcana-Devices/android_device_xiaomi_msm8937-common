@@ -196,4 +196,3 @@ persist.sys.binary_xml=false
 persist.timed.enable=true
 
 debug.hwui.use_hint_manager=true
-renderthread.skia.reduceopstasksplitting=false
