@@ -16,7 +16,7 @@
 on property:sys.performance.level=0
     chmod 644 /sys/class/thermal/thermal_message/sconfig
     write /sys/class/thermal/thermal_message/sconfig 0
-    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 1
+    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 0
     write /sys/class/kgsl/kgsl-3d0/force_bus_on 0
     write /sys/class/kgsl/kgsl-3d0/force_clk_on 0
     write /sys/class/kgsl/kgsl-3d0/force_no_nap 0
@@ -28,7 +28,7 @@ on property:sys.performance.level=0
 on property:sys.performance.level=1
     chmod 644 /sys/class/thermal/thermal_message/sconfig
     write /sys/class/thermal/thermal_message/sconfig 12
-    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 1
+    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 0
     write /sys/class/kgsl/kgsl-3d0/force_bus_on 1
     write /sys/class/kgsl/kgsl-3d0/force_clk_on 1
     write /sys/class/kgsl/kgsl-3d0/force_no_nap 1
@@ -41,10 +41,10 @@ on property:sys.performance.level=2
     chmod 644 /sys/class/thermal/thermal_message/sconfig
     write /sys/class/thermal/thermal_message/sconfig 14
     write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 1
-    write /sys/class/kgsl/kgsl-3d0/force_bus_on 1
-    write /sys/class/kgsl/kgsl-3d0/force_clk_on 1
-    write /sys/class/kgsl/kgsl-3d0/force_no_nap 1
-    write /sys/class/kgsl/kgsl-3d0/force_rail_on 1
+    write /sys/class/kgsl/kgsl-3d0/force_bus_on 0
+    write /sys/class/kgsl/kgsl-3d0/force_clk_on 0
+    write /sys/class/kgsl/kgsl-3d0/force_no_nap 0
+    write /sys/class/kgsl/kgsl-3d0/force_rail_on 0
     write /sys/class/kgsl/kgsl-3d0/idle_timer 72
     write /sys/class/kgsl/kgsl-3d0/throttling 0
     write /sys/module/lpm_levels/parameters/sleep_disabled 1
@@ -52,11 +52,11 @@ on property:sys.performance.level=2
 on property:sys.performance.level=3
     chmod 644 /sys/class/thermal/thermal_message/sconfig
     write /sys/class/thermal/thermal_message/sconfig 14
-    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 1
-    write /sys/class/kgsl/kgsl-3d0/force_bus_on 1
-    write /sys/class/kgsl/kgsl-3d0/force_clk_on 1
-    write /sys/class/kgsl/kgsl-3d0/force_no_nap 1
-    write /sys/class/kgsl/kgsl-3d0/force_rail_on 1
+    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 2
+    write /sys/class/kgsl/kgsl-3d0/force_bus_on 0
+    write /sys/class/kgsl/kgsl-3d0/force_clk_on 0
+    write /sys/class/kgsl/kgsl-3d0/force_no_nap 0
+    write /sys/class/kgsl/kgsl-3d0/force_rail_on 0
     write /sys/class/kgsl/kgsl-3d0/idle_timer 80
     write /sys/class/kgsl/kgsl-3d0/throttling 0
     write /sys/module/lpm_levels/parameters/sleep_disabled 1
@@ -72,6 +72,8 @@ on property:sys.performance.level=4
     write /sys/class/kgsl/kgsl-3d0/idle_timer 120
     write /sys/class/kgsl/kgsl-3d0/throttling 0
     write /sys/module/lpm_levels/parameters/sleep_disabled 1
+    write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 2
+    write /dev/cpuset/foreground/cpus 0-6
 
 on property:sys.performance.level=5
     chmod 644 /sys/class/thermal/thermal_message/sconfig
@@ -96,3 +98,5 @@ on property:sys.performance.level=6
     write /sys/class/kgsl/kgsl-3d0/idle_timer 99999
     write /sys/class/kgsl/kgsl-3d0/throttling 0
     write /sys/module/lpm_levels/parameters/sleep_disabled 1
+    write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 0
+    write /dev/cpuset/foreground/cpus 0-7
