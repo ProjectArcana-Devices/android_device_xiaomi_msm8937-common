@@ -72,8 +72,16 @@ on property:sys.performance.level=4
     write /sys/class/kgsl/kgsl-3d0/idle_timer 120
     write /sys/class/kgsl/kgsl-3d0/throttling 0
     write /sys/module/lpm_levels/parameters/sleep_disabled 1
+    write /sys/module/lpm_levels/parameters/lpm_ipi_prediction 0
+    write /sys/module/lpm_levels/parameters/lpm_prediction 0
     write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 2
-    write /dev/cpuset/foreground/cpus 0-6
+    write /dev/cpuset/foreground/cpus 0-7
+    write /dev/cpuset/background/cpus 6-7
+    write /dev/cpuset/top-app/cpus 0-7
+    write /proc/sys/kernel/sched_upmigrate 80
+    write /proc/sys/kernel/sched_downmigrate 50
+    write /proc/sys/kernel/sched_group_downmigrate 60
+    write /proc/sys/kernel/sched_group_upmigrate 80
 
 on property:sys.performance.level=5
     chmod 644 /sys/class/thermal/thermal_message/sconfig
@@ -86,6 +94,16 @@ on property:sys.performance.level=5
     write /sys/class/kgsl/kgsl-3d0/idle_timer 250
     write /sys/class/kgsl/kgsl-3d0/throttling 0
     write /sys/module/lpm_levels/parameters/sleep_disabled 1
+    write /sys/module/lpm_levels/parameters/lpm_ipi_prediction 0
+    write /sys/module/lpm_levels/parameters/lpm_prediction 0
+    write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 1
+    write /dev/cpuset/foreground/cpus 0-7
+    write /dev/cpuset/background/cpus 6-7
+    write /dev/cpuset/top-app/cpus 0-7
+    write /proc/sys/kernel/sched_upmigrate 60
+    write /proc/sys/kernel/sched_downmigrate 25
+    write /proc/sys/kernel/sched_group_downmigrate 35
+    write /proc/sys/kernel/sched_group_upmigrate 70
 
 on property:sys.performance.level=6
     chmod 644 /sys/class/thermal/thermal_message/sconfig
@@ -98,5 +116,14 @@ on property:sys.performance.level=6
     write /sys/class/kgsl/kgsl-3d0/idle_timer 99999
     write /sys/class/kgsl/kgsl-3d0/throttling 0
     write /sys/module/lpm_levels/parameters/sleep_disabled 1
+    write /sys/module/lpm_levels/parameters/lpm_ipi_prediction 0
+    write /sys/module/lpm_levels/parameters/lpm_prediction 0
     write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 0
     write /dev/cpuset/foreground/cpus 0-7
+    write /dev/cpuset/background/cpus 6-7
+    write /dev/cpuset/top-app/cpus 0-7
+    write /proc/sys/kernel/sched_upmigrate 60
+    write /proc/sys/kernel/sched_downmigrate 15
+    write /proc/sys/kernel/sched_group_downmigrate 25
+    write /proc/sys/kernel/sched_group_upmigrate 50
+
