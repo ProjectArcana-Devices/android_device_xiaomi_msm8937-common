@@ -1,6 +1,4 @@
 
 allow ueventd wcnss_persist_file:file r_file_perms;
-allow ueventd wifi_vendor_data_file:dir r_dir_perms;
-allow ueventd wifi_vendor_data_file:file r_file_perms;
 
 allow ueventd self:capability kill;
