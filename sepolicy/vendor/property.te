@@ -1,5 +1,0 @@
-# Dirac
-type dirac_prop, property_type;
-
-# Xiaomi
-type vendor_xiaomi_prop, property_type;
