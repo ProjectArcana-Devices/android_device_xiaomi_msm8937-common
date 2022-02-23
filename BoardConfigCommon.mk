@@ -6,6 +6,9 @@
 
 COMMON_PATH := device/xiaomi/msm8937-common
 
+# TEMP
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
