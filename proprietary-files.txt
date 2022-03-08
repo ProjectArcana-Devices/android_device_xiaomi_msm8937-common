@@ -1,8 +1,8 @@
 # All unpinned blobs below are extracted from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 # olive Package version: Xiaomi/olive/olive:10/QKQ1.191014.001/V12.5.1.0.QCNCNXM:user/release-keys
 # riva Package version: Xiaomi/riva/riva:8.1.0/OPM1.171019.026/V11.0.2.0.OCKMIXM:user/release-keys
-# ugg Package version: ugg-user 7.1.2 N2G47H V11.0.2.0.NDKMIXM release-keys
 # tissot Package version: Tissot PKQ1.180917.001 V10.0.24.0.PDHMIXM
+# ugg Package version: ugg-user 7.1.2 N2G47H V11.0.2.0.NDKMIXM release-keys
 
 # ADSP
 vendor/bin/adsprpcd
@@ -63,9 +63,9 @@ vendor/lib64/libqtigef.so
 vendor/lib64/libtinycompress_vendor.so
 
 # Audio dirac - from ugg
-vendor/etc/diracmobile.config|b99e9492e77e52ca3a511feae0409d59f6aebb87
 lib/libDiracAPI_SHARED.so:vendor/lib/libDiracAPI_SHARED.so|42b49679d38eca93fead05ea06ddbdc8108fd4b1
 lib/soundfx/libdirac.so:vendor/lib/soundfx/libdirac.so|e92652ab578e90bb9e9b09553c3554f27cb7c07f
+vendor/etc/diracmobile.config|b99e9492e77e52ca3a511feae0409d59f6aebb87
 
 # Audiosphere
 etc/permissions/audiosphere.xml
@@ -471,10 +471,10 @@ vendor/lib64/libqti-util.so
 
 # Perf configs - from olive
 vendor/etc/perf/commonresourceconfigs.xml|dba11b76c50adf85eb7684e5fe566f31cbd10b39
-vendor/etc/perf/perfboostsconfig.xml|6f897a2bae11272c7f607036993727ad88dcaa05
-vendor/etc/perf/perfconfigstore.xml|7b9df9c2f243697d29dae718e100607db5a8b397
 vendor/etc/perf/perf-profile0.conf|02204355bf29ceb0460cd53e6716552bb9d9b05f
 vendor/etc/perf/perf-profile1.conf|5ce649b26b71048734b797af7340d9f7f7b83ca0
+vendor/etc/perf/perfboostsconfig.xml|6f897a2bae11272c7f607036993727ad88dcaa05
+vendor/etc/perf/perfconfigstore.xml|7b9df9c2f243697d29dae718e100607db5a8b397
 vendor/etc/perf/targetconfig.xml|6106b22017b4e759c5804d12f439d2d09d567706
 vendor/etc/perf/targetresourceconfigs.xml|1817b8766a5b70c40c302f0add16a783fde135a4
 
