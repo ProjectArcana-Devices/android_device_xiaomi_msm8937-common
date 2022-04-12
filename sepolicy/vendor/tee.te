@@ -1,0 +1,5 @@
+
+# /data/goodix labeling
+
+allow tee system_data_file:dir create_dir_perms;
+
